@@ -4,6 +4,7 @@ tags:
   - R
   - open science
   - reproducible research
+  - project management
 authors:
   - name: Aaron R. Wolen
     orcid: 0000-0003-2542-2202
@@ -35,16 +36,9 @@ bibliography: paper.bib
 
 # Background
 
-Reproducible research starts with effective workflows that ensure the integrity of raw data and provenance of results through the transparent application of data processing methods.
+Reproducible research starts with effective workflows that ensure the integrity of raw data and provenance of results through the transparent application of data processing methods. While technical researchers have long had a myriad of services available that serve these functions (see karthik's git paper), there has been a gap in services for researchers whose training is far-removed from a software development environment. While services like git can present a prohibitively steep learning curve, the intuitive point-and-click web interface of OSF presents relatively few obstacles for research groups to adopt best practices for project collaboration. Researchers of all skill levels can immediately take advantage of open science mainstays including version control, activity logs and public access. Yet, this increase in user accessibility comes at the price of a reduction in automation. `osfr` fills this gap by allowing R users to integrate analytic workflows with OSF, providing a complete solution for project management.
 
-While technical researchers have long had a myriad of services available that serve these functions (see karthik's git paper), there has been a gap in services for less technically inclined researchers. In many ways, OSF serves to fill this gap. Providing many of the features that make services like github such an excellent platform for managing and distributing research but with a point-and-click web interface that is comparatively much simpler.
-
-OSF offers a suite of tools for managing project workflows that facilitate
-
-The first step towards using OSF is to create new project page. Every OSF project can have a title, description
-
-On OSF, individual repositories are referred to as *projects*, which serve as the fundamental unit of content organization. Every OSF project receives
-a website with a globally unique URL on the `osf.io` domain, which serves as the primary interface for accessing projects and utilizing their various features. Files are added by dragging them to the project's file browser, where they are uploaded to the free cloud storage provided by OSF.
+On OSF, individual repositories are referred to as *projects* with a globally unique URL on the `osf.io` domain, which serve as the fundamental unit of content organization. User files can be uploaded to project storage buckets with access permissions specified for each user. Nested projects serve as *components* of the parent project and provide a highly flexible framework for project organization. The main features of `osfr` is to automate the retrieval of existing project files and to facilitate the creation of new project structures.
 
 # Design
 
