@@ -21,7 +21,7 @@ authors:
 affiliations:
   - name: James D. Eason Transplant Research Institute, Department of Surgery, University of Tennessee Health Science Center
     index: 1
-  - name: Shuttleworth Foundation
+  - name: Department of Methodology and Statistics, Tilburg University
     index: 2
   - name: Merkle Group Inc.
     index: 3
