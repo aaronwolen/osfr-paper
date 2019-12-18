@@ -44,14 +44,18 @@ for researchers of all skill levels, or research groups composed of individuals 
 
 # Overview
 
-`osfr` leverages the OSF public REST API (https://developer.osf.io) to represent and manipulate the following types of entities: projects, components, files, directories, and users (i.e., accounts). What follows is a brief description of each entity type and they relate to one another.
+osfr leverages the OSF REST API (https://developer.osf.io) to represent and manipulate the following types of entities: projects, components, files, directories, and users (i.e., accounts). What follows is a brief description of each entity type and they relate to one another.
 
 On OSF, individual repositories are referred to as ***projects*** and serve as the top-level unit of content organization. Every project includes a cloud-based storage bucket where ***files*** can be stored and organized into ***directories***. Further organizational structure is easily achieved by adding sub-projects, referred to as ***components***, which are functionally identical to projects. By default, projects are private and accessible only by the ***user*** who created it but additional users can be granted access to an entire project or selectively to specific components. 
 
-The OSF API represents these entities using 1 of 3 different JavaScript Object Notation (JSON) structures: `node` for projects and components, `file` for files and directories, and `user` for user accounts. Because working with such deeply nested data structures is foreign for the typical R user, these entities are represented in `osfr` as `osf_tbl` objects, which are specialized data frames based on the `tibble` class [@tibble] and inspired by `googledrive`'s `dribble` class [@googledrive]. This `data.frame`-like approach to representing rather complex data structures presents an interface more natural to most R users.
+The OSF API represents these entities using 1 of 3 different JavaScript Object Notation (JSON) structures: `node` for projects and components, `file` for files and directories, and `user` for user accounts. Because working with such deeply nested data structures is foreign for the typical R user, these entities are represented in `osfr` as `osf_tbl` objects, which are specialized data frames based on the `tibble` class [@tibble] and inspired by [googledrive][]'s `dribble` class [@googledrive]. This `data.frame`-like approach to representing rather complex data structures presents an interface more natural to most R users.
 
 # Design
 
-Exported `osfr` functions all start with the prefix, `osf_`, following the `<prefix>_<verb>` convention used in packages like googledrive [@googledrive] and stringr [@stringr], which facilitates auto-completion in supported IDEs (like RStudio) and avoids namespace clashes with other packages that perform similar file-based tasks. Where possible, we adopt the names of common Unix utilities that perform analogous functions (e.g., `osf_cp()`, `osf_mkdir()`). In cases where the target of an action is ambiguous, function names are augmented with the intended target. For example, when passed an OSF project, `osf_ls()` could provide a list of the project's files or a list of the project's sub-components. Therefore, we use `osf_ls_files()` and `osf_ls_nodes()` to avoid such confusion. 
+Exported osfr functions all start with the prefix, `osf_`, following the `<prefix>_<verb>` convention used in packages like googledrive [@googledrive] and [stringr][] [@stringr], which facilitates auto-completion in supported IDEs (like RStudio) and avoids namespace clashes with other packages that perform similar file-based tasks. Where possible, we adopt the names of common Unix utilities that perform analogous functions (e.g., `osf_cp()`, `osf_mkdir()`). In cases where the target of an action is ambiguous, function names are augmented with the intended target. For example, when passed an OSF project, `osf_ls()` could provide a list of the project's files or a list of the project's sub-components. Therefore, we use `osf_ls_files()` and `osf_ls_nodes()` to avoid such confusion. 
 
 # References
+
+<!-- link -->
+[googledrive]: https://googledrive.tidyverse.org
+[stringr]: https://stringr.tidyverse.org
