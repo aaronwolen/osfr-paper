@@ -45,5 +45,5 @@ $(output): $(input) $(bib) Makefile
 	--template $(assets)/latex.template \
 	$< -o $@ \
 
-autorefresh:;
-	((ls $(input) $(bib) | entr make $(output)) &)
+clean:
+	rm -rf *.pdf
