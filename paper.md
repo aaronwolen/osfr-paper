@@ -46,9 +46,4 @@ This R package provides a suite of functions for performing project management t
 
 All OSF entities are represented in `osfr` as `osf_tbl` objects, which are specialized data frames based on the [tibble][tibble::tibble-package] class and inspired by googledrive's `dribble` class. This approach to representing rather complex data structures provides an interface that feels more natural to R users. The setup of a personal access token (PAT) is recommended for use of the `osfr` package and instructions can be access in an introductory vignette.  
 
-
-
-# Acknowledgements
-OSF is developed by the Center for Open Science in Charlottesville, VA. The original version of `osfr` was developed by Chris Chartgerink and further developed by Brian Richards and Ryan Hafen. The current version was developed by Aaron Wolen and is heavily inspired by Jennifer Bryan and Lucy D’Agostino McGowan’s excellent `googledrive` package. Other important resources include http testing by Scott Chamberlain and R Packages by Hadley Wickham. Development was also greatly facilitated by OSF’s excellent API documentation. Big thanks to Rusty Speidel for designing our logo and Tim Errington for his feedback during development.
-
 # References
