@@ -49,13 +49,14 @@ A key organizational feature of OSF is the ability to augment a project's struct
 
 ## Implementation and Design
 
-osfr is built on the OSF public REST API, available at https://developer.osf.io, and API Communication is handled by ROpenSci's HTTP client, crul [@crul]. In order to provide an interface that feels natural to R users, items retrieved from OSF are represented as `osf_tbl` objects, specialized `data.frame`-like structures, based on [googledrive][]'s `dribble` class [@googledrive], that use a list-column to store (and sequester) the API's JSON responses. These deeply nested data structures are rarely of interest to end users but are essential for the package's internal methods. 
+osfr is built on the OSF public REST API, available at https://developer.osf.io, and API Communication is handled by ROpenSci's HTTP client, crul [@crul]. In order to provide an interface that feels natural to R users, items retrieved from OSF are represented as `osf_tbl` objects, specialized `data.frame`-like structures, based on [googledrive][]'s `dribble` class [@googledrive], that use a list-column to store (and sequester) the API's JSON responses. These deeply nested data structures are rarely of interest to end users but are essential for the package's internal methods. The vast majority of osfr functions return `osf_tbl`s as output and expect them as input, so that method chaining is possible using [magrittr][]'s pipe operator [@magrittr].
 
-Exported osfr functions all start with the prefix, `osf_`, following the `<prefix>_<verb>` convention used in packages like [stringr][] [@stringr], which facilitates auto-completion in supported IDEs (like RStudio) and avoids namespace clashes with other packages that perform similar file-based operations. Where possible, we adopt the names of common Unix utilities that perform analogous functions (e.g., `osf_cp()`, `osf_mkdir()`). In cases where the target of an action is ambiguous, function names are augmented with the intended target. For example, when passed an OSF project, `osf_ls()` could provide a list of the project's files or a list of the project's sub-components. Therefore, we use `osf_ls_files()` and `osf_ls_nodes()` to avoid such confusion. 
+Exported osfr functions all start with the prefix, `osf_`, following the `<prefix>_<verb>` convention used in packages like [stringr][] [@stringr], which facilitates auto-completion in supported IDEs (like RStudio) and avoids namespace clashes with other packages that perform similar file-based operations. Where possible, we adopt the names of common Unix utilities that perform analogous tasks (e.g., `osf_cp()`, `osf_mkdir()`).
 
 # References
 
 <!-- link -->
 [cbrp]: https://osf.io/e81xl/ "Reproducibility Project: Cancer Biology"
 [googledrive]: https://googledrive.tidyverse.org
+[magrittr]: https://magrittr.tidyverse.org
 [stringr]: https://stringr.tidyverse.org
