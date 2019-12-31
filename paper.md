@@ -33,10 +33,6 @@ date: 27 November 2019
 bibliography: paper.bib
 ---
 
-# Summary
-
-`osfr` provides an idiomatic R interface to OSF (Open Science Framework, https://www.osf.io), a free and open source web application that is part open-access repository and part collaborative project management tool.
-
 # Background
 
 Reproducible research requires effective project management workflows that promote consistency and facilitate transparency. Hallmarks of effective workflows include strategies for tracking the provenance of results, recording intermediate changes, conveniently documenting procedures, and working with collaborators without duplicating effort [@Sandve:2013]. For technically skilled researchers, the combination of version control software (VCS) and cloud-based project repositories (e.g., git and GitHub) enable highly effective workflows [@Ram:2013de] and represent a near gold-standard for computational reproducibility. However, these tools have a steep learning curve, especially for researchers whose training is far removed from software development. Alternatively, the Open Science Framework (OSF) offers much of the same functionality through an intuitive point-and-click web-based interface, significantly lowering the barrier to adopting best practices for researchers of all skill levels, or research groups composed of individuals with different levels of computational expertise [@Sullivan:2019]. Yet, this increase in user accessibility comes at the cost of limiting opportunities for automating certain tasks that are inherent to VCS-based workflows. `osfr` fills this gap for R users by allowing them to programmatically interact with OSF through a suite of functions for managing their projects and files.
@@ -52,6 +48,10 @@ A key organizational feature of OSF is the ability to augment a project's struct
 osfr is built on the OSF public REST API, available at https://developer.osf.io, and API Communication is handled by ROpenSci's HTTP client, crul [@crul]. In order to provide an interface that feels natural to R users, items retrieved from OSF are represented as `osf_tbl` objects, specialized `data.frame`-like structures, based on [googledrive][]'s `dribble` class [@googledrive], that use a list-column to store (and sequester) the API's JSON responses. These deeply nested data structures are rarely of interest to end users but are essential for the package's internal methods. The vast majority of osfr functions return `osf_tbl`s as output and expect them as input, so that method chaining is possible using [magrittr][]'s pipe operator [@magrittr].
 
 Exported osfr functions all start with the prefix, `osf_`, following the `<prefix>_<verb>` convention used in packages like [stringr][] [@stringr], which facilitates auto-completion in supported IDEs (like RStudio) and avoids namespace clashes with other packages that perform similar file-based operations. Where possible, we adopt the names of common Unix utilities that perform analogous tasks (e.g., `osf_cp()`, `osf_mkdir()`).
+
+# Summary
+
+`osfr` provides an idiomatic R interface to OSF (Open Science Framework, https://www.osf.io), a free and open source web application that is part open-access repository and part collaborative project management tool.
 
 # References
 
