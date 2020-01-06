@@ -10,6 +10,7 @@ authors:
     orcid: 0000-0003-2542-2202
     affiliation: 1
   - name: Chris H.J. Hartgerink
+    orcid: 0000-0003-1050-6809
     affiliation: 2
   - name: Brian G. Richards
     affiliation: 3
@@ -21,7 +22,7 @@ authors:
 affiliations:
   - name: James D. Eason Transplant Research Institute, Department of Surgery, University of Tennessee Health Science Center
     index: 1
-  - name: Department of Methodology and Statistics, Tilburg University
+  - name: Liberate Science GmbH
     index: 2
   - name: Merkle Group Inc.
     index: 3
