@@ -16,7 +16,8 @@ authors:
     affiliation: 3
   - name: Brian G. Richards
     affiliation: 4
-  - name: Courtney Soderberg
+  - name: Courtney K. Soderberg
+    orcid: 0000-0003-1227-7042
     affiliation: 5
   - name: Timothy P. York
     orcid: 0000-0003-4068-4286
