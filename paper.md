@@ -12,24 +12,28 @@ authors:
   - name: Chris H.J. Hartgerink
     orcid: 0000-0003-1050-6809
     affiliation: 2
-  - name: Brian G. Richards
+  - name: Ryan Hafen
     affiliation: 3
-  - name: Courtney Soderberg
+  - name: Brian G. Richards
     affiliation: 4
+  - name: Courtney Soderberg
+    affiliation: 5
   - name: Timothy P. York
     orcid: 0000-0003-4068-4286
-    affiliation: 5
+    affiliation: 6
 affiliations:
   - name: James D. Eason Transplant Research Institute, Department of Surgery, University of Tennessee Health Science Center
     index: 1
   - name: Liberate Science GmbH
     index: 2
-  - name: Merkle Group Inc.
+  - name: Department of Statistics, Purdue University
     index: 3
-  - name: Center for Open Science
+  - name: Merkle Group Inc.
     index: 4
-  - name: Data Science Lab, Department of Human and Molecular Genetics, Virginia Commonwealth University
+  - name: Center for Open Science
     index: 5
+  - name: Data Science Lab, Department of Human and Molecular Genetics, Virginia Commonwealth University
+    index: 6
 date: 27 November 2019
 bibliography: paper.bib
 ---
